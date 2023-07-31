@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/random-strided-randu",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Fill a strided array with uniformly distributed pseudorandom numbers between 0 and 1.",
   "license": "Apache-2.0",
   "author": {

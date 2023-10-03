@@ -35,43 +35,30 @@ limitations under the License.
 
 > Fill a strided array with [uniformly][@stdlib/random/base/randu] distributed pseudorandom numbers between `0` and `1`.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/random-strided-randu
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-randu = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-strided-randu@umd/browser.js' )
-```
-The previous example will load the latest bundled code from the umd branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/random-strided-randu/tags). For example,
-
-```javascript
-randu = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-strided-randu@v0.1.0-umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var randu = require( 'path/to/vendor/umd/random-strided-randu/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-strided-randu@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.randu;
-})();
-</script>
+var randu = require( '@stdlib/random-strided-randu' );
 ```
 
 #### randu( N, out, so\[, options] )
@@ -210,16 +197,11 @@ The function accepts the same `options` as documented above for `randu()`.
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-zeros@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-base-zero-to@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-strided-randu@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var zeros = require( '@stdlib/array-zeros' );
+var zeroTo = require( '@stdlib/array-base-zero-to' );
+var logEach = require( '@stdlib/console-log-each' );
+var randu = require( '@stdlib/random-strided-randu' );
 
 // Specify a PRNG seed:
 var opts = {
@@ -243,11 +225,6 @@ randu( x2.length, x2, 1, opts );
 
 // Print the array contents:
 logEach( 'x1[%d] = %.2f; x2[%d] = %.2f', idx, x1, idx, x2 );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -301,8 +278,8 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/random-strided-randu.svg
 [npm-url]: https://npmjs.org/package/@stdlib/random-strided-randu
 
-[test-image]: https://github.com/stdlib-js/random-strided-randu/actions/workflows/test.yml/badge.svg?branch=v0.1.0
-[test-url]: https://github.com/stdlib-js/random-strided-randu/actions/workflows/test.yml?query=branch:v0.1.0
+[test-image]: https://github.com/stdlib-js/random-strided-randu/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/random-strided-randu/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/random-strided-randu/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/random-strided-randu?branch=main
@@ -333,13 +310,13 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
-[@stdlib/random/base/randu]: https://github.com/stdlib-js/random-base-randu/tree/umd
+[@stdlib/random/base/randu]: https://github.com/stdlib-js/random-base-randu
 
-[@stdlib/random/base/mt19937]: https://github.com/stdlib-js/random-base-mt19937/tree/umd
+[@stdlib/random/base/mt19937]: https://github.com/stdlib-js/random-base-mt19937
 
-[@stdlib/random/base/minstd]: https://github.com/stdlib-js/random-base-minstd/tree/umd
+[@stdlib/random/base/minstd]: https://github.com/stdlib-js/random-base-minstd
 
-[@stdlib/random/base/minstd-shuffle]: https://github.com/stdlib-js/random-base-minstd-shuffle/tree/umd
+[@stdlib/random/base/minstd-shuffle]: https://github.com/stdlib-js/random-base-minstd-shuffle
 
 </section>
 

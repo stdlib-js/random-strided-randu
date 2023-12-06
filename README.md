@@ -35,30 +35,20 @@ limitations under the License.
 
 > Fill a strided array with [uniformly][@stdlib/random/base/randu] distributed pseudorandom numbers between `0` and `1`.
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/random-strided-randu
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
--   If you are using Deno, visit the [`deno` branch][deno-url].
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var randu = require( '@stdlib/random-strided-randu' );
+import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-strided-randu@deno/mod.js';
+```
+
+You can also import the following named exports from the package:
+
+```javascript
+import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-strided-randu@deno/mod.js';
 ```
 
 #### randu( N, out, so\[, options] )
@@ -66,7 +56,7 @@ var randu = require( '@stdlib/random-strided-randu' );
 Fills a strided array with [uniformly][@stdlib/random/base/randu] distributed pseudorandom numbers between `0` and `1`.
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
 
 // Create an array:
 var out = new Float64Array( 10 );
@@ -94,7 +84,7 @@ Note that indexing is relative to the first index. To introduce an offset, use [
 <!-- eslint-disable stdlib/capitalized-comments -->
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
 
 // Initial array:
 var out0 = new Float64Array( 6 );
@@ -125,7 +115,7 @@ The function accepts the following `options`:
 By default, the underlying pseudorandom number generator is [`mt19937`][@stdlib/random/base/mt19937]. To use a different PRNG, set the `name` option.
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
 
 var opts = {
     'name': 'minstd-shuffle'
@@ -138,7 +128,7 @@ randu( out.length, out, 1, opts );
 To seed the underlying pseudorandom number generator, set the `seed` option.
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
 
 var opts = {
     'seed': 12345
@@ -153,7 +143,7 @@ randu( out.length, out, 1, opts );
 Fills a strided array with [uniformly][@stdlib/random/base/randu] distributed pseudorandom numbers between `0` and `1` using alternative indexing semantics.
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
 
 // Create an array:
 var out = new Float64Array( 10 );
@@ -198,10 +188,10 @@ The function accepts the same `options` as documented above for `randu()`.
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-var zeros = require( '@stdlib/array-zeros' );
-var zeroTo = require( '@stdlib/array-base-zero-to' );
-var logEach = require( '@stdlib/console-log-each' );
-var randu = require( '@stdlib/random-strided-randu' );
+import zeros from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-zeros@deno/mod.js';
+import zeroTo from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-zero-to@deno/mod.js';
+import logEach from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each@deno/mod.js';
+import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-strided-randu@deno/mod.js';
 
 // Specify a PRNG seed:
 var opts = {
@@ -256,7 +246,7 @@ logEach( 'x1[%d] = %.2f; x2[%d] = %.2f', idx, x1, idx, x2 );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -318,19 +308,19 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
-[@stdlib/random/base/randu]: https://github.com/stdlib-js/random-base-randu
+[@stdlib/random/base/randu]: https://github.com/stdlib-js/random-base-randu/tree/deno
 
-[@stdlib/random/base/mt19937]: https://github.com/stdlib-js/random-base-mt19937
+[@stdlib/random/base/mt19937]: https://github.com/stdlib-js/random-base-mt19937/tree/deno
 
-[@stdlib/random/base/minstd]: https://github.com/stdlib-js/random-base-minstd
+[@stdlib/random/base/minstd]: https://github.com/stdlib-js/random-base-minstd/tree/deno
 
-[@stdlib/random/base/minstd-shuffle]: https://github.com/stdlib-js/random-base-minstd-shuffle
+[@stdlib/random/base/minstd-shuffle]: https://github.com/stdlib-js/random-base-minstd-shuffle/tree/deno
 
 <!-- <related-links> -->
 
-[@stdlib/random/array/randu]: https://github.com/stdlib-js/random-array-randu
+[@stdlib/random/array/randu]: https://github.com/stdlib-js/random-array-randu/tree/deno
 
-[@stdlib/random/strided/uniform]: https://github.com/stdlib-js/random-strided-uniform
+[@stdlib/random/strided/uniform]: https://github.com/stdlib-js/random-strided-uniform/tree/deno
 
 <!-- </related-links> -->
 

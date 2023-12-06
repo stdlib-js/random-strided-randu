@@ -235,6 +235,14 @@ logEach( 'x1[%d] = %.2f; x2[%d] = %.2f', idx, x1, idx, x2 );
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   <span class="package-name">[`@stdlib/random-base/randu`][@stdlib/random/base/randu]</span><span class="delimiter">: </span><span class="description">uniformly distributed pseudorandom numbers between 0 and 1.</span>
+-   <span class="package-name">[`@stdlib/random-array/randu`][@stdlib/random/array/randu]</span><span class="delimiter">: </span><span class="description">create an array containing uniformly distributed pseudorandom numbers between 0 and 1.</span>
+-   <span class="package-name">[`@stdlib/random-strided/uniform`][@stdlib/random/strided/uniform]</span><span class="delimiter">: </span><span class="description">fill a strided array with pseudorandom numbers drawn from a continuous uniform distribution.</span>
+
 </section>
 
 <!-- /.related -->
@@ -317,6 +325,14 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [@stdlib/random/base/minstd]: https://github.com/stdlib-js/random-base-minstd
 
 [@stdlib/random/base/minstd-shuffle]: https://github.com/stdlib-js/random-base-minstd-shuffle
+
+<!-- <related-links> -->
+
+[@stdlib/random/array/randu]: https://github.com/stdlib-js/random-array-randu
+
+[@stdlib/random/strided/uniform]: https://github.com/stdlib-js/random-strided-uniform
+
+<!-- </related-links> -->
 
 </section>
 

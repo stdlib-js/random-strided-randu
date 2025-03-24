@@ -35,20 +35,32 @@ limitations under the License.
 
 > Fill a strided array with [uniformly][@stdlib/random/base/randu] distributed pseudorandom numbers between `0` and `1`.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/random-strided-randu
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-strided-randu@esm/index.mjs';
-```
-
-You can also import the following named exports from the package:
-
-```javascript
-import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-strided-randu@esm/index.mjs';
+var randu = require( '@stdlib/random-strided-randu' );
 ```
 
 #### randu( N, out, so\[, options] )
@@ -56,7 +68,7 @@ import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-strided-ra
 Fills a strided array with [uniformly][@stdlib/random/base/randu] distributed pseudorandom numbers between `0` and `1`.
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
 
 // Create an array:
 var out = new Float64Array( 10 );
@@ -84,7 +96,7 @@ Note that indexing is relative to the first index. To introduce an offset, use [
 <!-- eslint-disable stdlib/capitalized-comments -->
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
 
 // Initial array:
 var out0 = new Float64Array( 6 );
@@ -115,7 +127,7 @@ The function accepts the following `options`:
 By default, the underlying pseudorandom number generator is [`mt19937`][@stdlib/random/base/mt19937]. To use a different PRNG, set the `name` option.
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
 
 var opts = {
     'name': 'minstd-shuffle'
@@ -128,7 +140,7 @@ randu( out.length, out, 1, opts );
 To seed the underlying pseudorandom number generator, set the `seed` option.
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
 
 var opts = {
     'seed': 12345
@@ -143,7 +155,7 @@ randu( out.length, out, 1, opts );
 Fills a strided array with [uniformly][@stdlib/random/base/randu] distributed pseudorandom numbers between `0` and `1` using alternative indexing semantics.
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
 
 // Create an array:
 var out = new Float64Array( 10 );
@@ -187,16 +199,11 @@ The function accepts the same `options` as documented above for `randu()`.
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import zeros from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-zeros@esm/index.mjs';
-import zeroTo from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-zero-to@esm/index.mjs';
-import logEach from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each@esm/index.mjs';
-import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-strided-randu@esm/index.mjs';
+```javascript
+var zeros = require( '@stdlib/array-zeros' );
+var zeroTo = require( '@stdlib/array-base-zero-to' );
+var logEach = require( '@stdlib/console-log-each' );
+var randu = require( '@stdlib/random-strided-randu' );
 
 // Specify a PRNG seed:
 var opts = {
@@ -220,10 +227,6 @@ randu( x2.length, x2, 1, opts );
 
 // Print the array contents:
 logEach( 'x1[%d] = %.2f; x2[%d] = %.2f', idx, x1, idx, x2 );
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -255,7 +258,7 @@ logEach( 'x1[%d] = %.2f; x2[%d] = %.2f', idx, x1, idx, x2 );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -272,7 +275,7 @@ See [LICENSE][stdlib-license].
 
 ## Copyright
 
-Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
+Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 </section>
 
@@ -320,19 +323,19 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
-[@stdlib/random/base/randu]: https://github.com/stdlib-js/random-base-randu/tree/esm
+[@stdlib/random/base/randu]: https://github.com/stdlib-js/random-base-randu
 
-[@stdlib/random/base/mt19937]: https://github.com/stdlib-js/random-base-mt19937/tree/esm
+[@stdlib/random/base/mt19937]: https://github.com/stdlib-js/random-base-mt19937
 
-[@stdlib/random/base/minstd]: https://github.com/stdlib-js/random-base-minstd/tree/esm
+[@stdlib/random/base/minstd]: https://github.com/stdlib-js/random-base-minstd
 
-[@stdlib/random/base/minstd-shuffle]: https://github.com/stdlib-js/random-base-minstd-shuffle/tree/esm
+[@stdlib/random/base/minstd-shuffle]: https://github.com/stdlib-js/random-base-minstd-shuffle
 
 <!-- <related-links> -->
 
-[@stdlib/random/array/randu]: https://github.com/stdlib-js/random-array-randu/tree/esm
+[@stdlib/random/array/randu]: https://github.com/stdlib-js/random-array-randu
 
-[@stdlib/random/strided/uniform]: https://github.com/stdlib-js/random-strided-uniform/tree/esm
+[@stdlib/random/strided/uniform]: https://github.com/stdlib-js/random-strided-uniform
 
 <!-- </related-links> -->
 
